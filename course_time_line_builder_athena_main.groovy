@@ -1,4 +1,4 @@
-job('course_time_line_builder_athena_main') {
+matrixJob('course_time_line_builder_athena_main') {
     description('This is an course_time_line_builder_athena_main Job DSL job')
        axes {
            axis {
