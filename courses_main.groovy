@@ -1,4 +1,4 @@
-job('courses_main') {
+matrixJob('courses_main') {
     description('This is an courses_main Job DSL job')
         
    axes {
