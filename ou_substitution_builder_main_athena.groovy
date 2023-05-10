@@ -1,3 +1,10 @@
+package hudson.cli;
+
+import jenkins.model.Jenkins;
+import hudson.model.ListView;
+
+Jenkins jenkins = Jenkins.getInstance()
+
 matrixJob('ou_substitution_builder_main_athena') {
     description('This is an ou_substitution_builder_main_athena Job DSL job')
        axes {
