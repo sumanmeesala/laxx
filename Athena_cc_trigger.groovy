@@ -23,6 +23,6 @@ job('Athena_cc_trigger') {
 }
 
 
-myView = hudson.model.Huson.instance.getView(viewName)
+myView = hudson.model.Hudson.instance.getView(viewName)
 myView.doAddJobToView('Athena_cc_trigger')
 jenkins.save()
