@@ -18,4 +18,7 @@ matrixJob('ou_substitution_builder_main_athena') {
               downstream('course_lineage_athena_builder_main')
               downstream('org_unit_hierarchy_builder_main_athena_corpwise')
                    }
+    myView = hudson.model.Hudson.instance.getView(viewName)
+myView.doAddJobToView('Athena_cc_trigger')
+jenkins.save()
 }
