@@ -4,7 +4,7 @@ import hudson.model.listView
 Jenkins jenkins = Jenkins.getInstance()
 
 def viewName = 'Athena'
-jenkins.addView(new  ListView(viewName))
+jenkins.addView(new ListView(viewName))
 
 
 
@@ -24,5 +24,5 @@ job('Athena_cc_trigger') {
 
 
 myView = hudson.model.Huson.instance.getView(viewName)
-myView.doAddJobToView('Athena_cc_trigger)
+myView.doAddJobToView('Athena_cc_trigger')
 jenkins.save()
