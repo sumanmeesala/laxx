@@ -26,6 +26,6 @@ matrixJob('ou_substitution_builder_main_athena') {
               downstream('org_unit_hierarchy_builder_main_athena_corpwise')
                    }
     myView = hudson.model.Hudson.instance.getView('Athena')
-myView.doAddJobToView('Athena_cc_trigger')
+myView.doAddJobToView('ou_substitution_builder_main_athena')
 jenkins.save()
 }
