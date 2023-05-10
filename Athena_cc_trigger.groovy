@@ -1,7 +1,7 @@
 package hudson.cli;
 
 import jenkins.model.Jenkins;
-import hudson.model.listView;
+import hudson.model.ListView;
 
 Jenkins jenkins = Jenkins.getInstance()
 
