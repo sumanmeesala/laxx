@@ -24,10 +24,10 @@ matrixJob('course_lineage_athna_b_m') {
             publishers {
               downstream('user_lo_latest_lo_version_substitution_b_m_athna')
                    }
-                   
-myView = hudson.model.Hudson.instance.getView(Athna)
+}                   
+myView = hudson.model.Hudson.instance.getView('Athna')
 myView.doAddJobToView('athna_cc_trigger') 
 jenkins.save()
 
-}
+
 
