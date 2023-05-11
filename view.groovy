@@ -1,3 +1,14 @@
+package hudson.cli;
+
+import jenkins.model.Jenkins;
+import hudson.model.ListView;
+
+Jenkins jenkins = Jenkins.getInstance()
+
+def viewName = 'Athena'
+jenkins.addView (new ListView(viewName))
+
+myView = hudson.model.Hudson.instance.getView(viewName)
 myView.doAddJobToView('Athena_cc_trigger') 
 myView.doAddJobToView('bt_nodes_decrease') 
 myView.doAddJobToView('course_lineage_athena_builder_main') 
@@ -34,3 +45,6 @@ myView.doAddJobToView('playlist_recommendations_nc_builder_main')
 myView.doAddJobToView('subject_recommendations_builder_main') 
 myView.doAddJobToView('subject_recommendations_nc_builder_main') 
 myView.doAddJobToView('user_lo_latest_lo_version_substitution_builder_main_athena') 
+
+
+jenkins.save()
