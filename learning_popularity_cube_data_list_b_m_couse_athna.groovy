@@ -7,8 +7,8 @@ import hudson.model.ListView;
 Jenkins jenkins = Jenkins.getInstance()
 
 
-matrixJob('ou_substitution_b_m_athna') {
-    description('This is an ou_substitution_b_m_athna Job DSL job')
+matrixJob('learning_popularity_cube_data_list_b_m_couse_athna') {
+    description('This is an learning_popularity_cube_data_list_b_m_couse_athna Job DSL job')
        axes {
            axis {
                  name('corpId')
@@ -19,15 +19,14 @@ matrixJob('ou_substitution_b_m_athna') {
 
 
     steps {
-        shell('echo "Im ou_substitution_b_m_athna"')
+        shell('echo "Im learning_popularity_cube_data_list_b_m_couse_athna"')
     }
             publishers {
-              downstream('course_lineage_athna_b_m')
-              downstream('org_unit_hierarchy_b_m_athna_corpwise')
+              downstream('learning_popularity_nc_cube_data_list_b_m')
                    }
                              
 myView = hudson.model.Hudson.instance.getView('Athna')
-myView.doAddJobToView('ou_substitution_b_m_athna') 
+myView.doAddJobToView('learning_popularity_cube_data_list_b_m_couse_athna') 
 jenkins.save()
 
 }

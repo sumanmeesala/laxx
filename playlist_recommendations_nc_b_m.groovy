@@ -7,26 +7,26 @@ import hudson.model.ListView;
 Jenkins jenkins = Jenkins.getInstance()
 
 
-matrixJob('org_unit_hierarchy_b_m_athna_corpwise') {
-    description('This is an org_unit_hierarchy_b_m_athna_corpwise Job DSL job')
+matrixJob('playlist_recommendations_nc_b_m') {
+    description('This is an playlist_recommendations_nc_b_m Job DSL job')
        axes {
            axis {
                  name('corpId')
-                 valueString('ALL')
+                 valueString(CC_CLIENTS)
                 }
       
         }
 
 
     steps {
-        shell('echo "Im org_unit_hierarchy_b_m_athna_corpwise"')
+        shell('echo "Im playlist_recommendations_nc_b_m"')
     }
             publishers {
-              downstream('employee_dim_attributes_b_m_athna')
+              downstream('course_playlist_bloom_filter_b_m')
                    }
                              
 myView = hudson.model.Hudson.instance.getView('Athna')
-myView.doAddJobToView('org_unit_hierarchy_b_m_athna_corpwise') 
+myView.doAddJobToView('playlist_recommendations_nc_b_m') 
 jenkins.save()
 
 }

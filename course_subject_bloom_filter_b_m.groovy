@@ -7,23 +7,23 @@ import hudson.model.ListView;
 Jenkins jenkins = Jenkins.getInstance()
 
 
-matrixJob('delete_data_proc_cluster') {
-    description('This is an delete_data_proc_cluster Job DSL job')
+matrixJob('course_subject_bloom_filter_b_m') {
+    description('This is an course_subject_bloom_filter_b_m Job DSL job')
        axes {
            axis {
                  name('corpId')
-                 valueString(CC_CLIENTS)
+                 valueString('ALL')
                 }
       
         }
 
 
     steps {
-        shell('echo "Im delete_data_proc_cluster"')
+        shell('echo "Im course_subject_bloom_filter_b_m"')
     }
-          
+                  
 myView = hudson.model.Hudson.instance.getView('Athna')
-myView.doAddJobToView('delete_data_proc_cluster') 
+myView.doAddJobToView('course_subject_bloom_filter_b_m') 
 jenkins.save()
 
 }
