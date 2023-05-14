@@ -27,7 +27,7 @@ matrixJob('org_unit_hierarchy_b_m_athna_corpwise') {
                    
                                       
 myView = hudson.model.Hudson.instance.getView('Athna')
-myView.doAddJobToView('athna_cc_trigger') 
+myView.doAddJobToView('org_unit_hierarchy_b_m_athna_corpwise') 
 jenkins.save()
 
 }

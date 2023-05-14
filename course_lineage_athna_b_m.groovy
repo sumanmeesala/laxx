@@ -26,7 +26,7 @@ matrixJob('course_lineage_athna_b_m') {
                    }
                    
 myView = hudson.model.Hudson.instance.getView('Athna')
-myView.doAddJobToView('athna_cc_trigger') 
+myView.doAddJobToView('course_lineage_athna_b_m') 
 jenkins.save()
 
 }
