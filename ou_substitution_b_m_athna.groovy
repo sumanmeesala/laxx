@@ -27,7 +27,7 @@ matrixJob('ou_substitution_b_m_athna') {
                    }
                    
                                       
-myView = hudson.model.Hudson.instance.getView(Athna)
+myView = hudson.model.Hudson.instance.getView('Athna')
 myView.doAddJobToView('athna_cc_trigger') 
 jenkins.save()
 
