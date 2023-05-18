@@ -9,7 +9,7 @@ matrixJob('bt_nodes_decrease') {
     description('This is an bt_nodes_decrease Job DSL job')
     
         triggers {
-        cron('0 26 9 18 5') // Run the job at 8:00 AM every day
+        cron('28 9 18 5 *') // Run the job at 8:00 AM every day
     }
    axes {
            axis {
