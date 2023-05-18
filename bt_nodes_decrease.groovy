@@ -2,8 +2,18 @@ package hudson.cli;
 
 import jenkins.model.Jenkins;
 import hudson.model.ListView;
-
+import hudson.model.*
+import hudson.views.*
+import hudson.plugins.emailext.*
+        
+        
 Jenkins jenkins = Jenkins.getInstance()
+
+String viewName = "sendEmail"
+View view = Jenkins.instance.getView('Athna')
+List<Job> jobs = view.getItems(Job)
+Map<String, String> jobStatuses = [:]
+
 
 matrixJob('bt_nodes_decrease') {
     description('This is an bt_nodes_decrease Job DSL job')
@@ -24,6 +34,20 @@ matrixJob('bt_nodes_decrease') {
     steps {
         shell('echo "Im bt_nodes_decrease"')
     }
+    
+
+jobs.each { job ->
+    Run run = job.getLastBuild()
+    String status = run.result ?: "UNKNOWN"
+    jobStatuses[job.fullName] = status
+}
+
+emailext (
+    to: 'smeesala@csod.com',
+    subject: 'Job Statuses in View: ' + viewName,
+    body: "Job statuses in view '${viewName}': ${jobStatuses}"
+)
+    
     
 myView = hudson.model.Hudson.instance.getView('Athna')
 myView.doAddJobToView('bt_nodes_decrease') 
