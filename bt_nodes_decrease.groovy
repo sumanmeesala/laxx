@@ -11,8 +11,7 @@ Jenkins jenkins = Jenkins.getInstance()
 
 String viewName = "sendEmail"
 View view = Jenkins.instance.getView('Athna')
-List<Job> jobs = view.getItems(Job)
-Map<String, String> jobStatuses = [:]
+
 
 
 matrixJob('bt_nodes_decrease') {
