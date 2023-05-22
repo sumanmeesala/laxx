@@ -36,18 +36,7 @@ matrixJob('bt_nodes_decrease') {
     }
     
 
-jobs.each { job ->
-    Run run = job.getLastBuild()
-    String status = run.result ?: "UNKNOWN"
-    jobStatuses[job.fullName] = status
-}
 
-emailext (
-    to: 'smeesala@csod.com',
-    subject: 'Job Statuses in View: ' + viewName,
-    body: "Job statuses in view '${viewName}': ${jobStatuses}"
-)
-    
     
 myView = hudson.model.Hudson.instance.getView('Athna')
 myView.doAddJobToView('bt_nodes_decrease') 
