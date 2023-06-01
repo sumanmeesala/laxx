@@ -12,7 +12,7 @@ def existingView = Jenkins.instance.getView(viewName)
 if (existingView == null) {
     // View doesn't exist, create it
     def newView = 'Athna'
-    newView.save()
+   // newView.save()
 } else {
     // View already exists
 }
