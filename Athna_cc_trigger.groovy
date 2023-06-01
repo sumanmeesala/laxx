@@ -11,11 +11,9 @@ def viewName = 'Athna'
 def existingView = Jenkins.instance.getView(viewName)
 if (existingView == null) {
     // View doesn't exist, create it
-    def newView = 'Athna'
+    // def newView = 'Athna'
+    jenkins.addView (new ListView(viewName))
    // newView.save()
-} else {
-    def newView = existingView
-    // View already exists
 }
 
 
@@ -30,7 +28,7 @@ job('Athna_cc_trigger') {
               downstream('ou_substitution_b_m_athna')
                    }
                    
-myView = hudson.model.Hudson.instance.getView(newView)
+myView = hudson.model.Hudson.instance.getView(viewName)
 myView.doAddJobToView('athna_cc_trigger') 
 jenkins.save()
 }
