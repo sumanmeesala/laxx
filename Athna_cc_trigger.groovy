@@ -14,6 +14,7 @@ if (existingView == null) {
     def newView = 'Athna'
    // newView.save()
 } else {
+    def newView = existingView
     // View already exists
 }
 
