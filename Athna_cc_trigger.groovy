@@ -22,7 +22,7 @@ job('Athna_cc_trigger') {
 
 
     steps {
-        shell('echo "Im Athna_cc_trigger - 4 modified"')
+        shell('echo "Im Athna_cc_trigger - 5 modified"')
     }
         publishers {
               downstream('ou_substitution_b_m_athna')
