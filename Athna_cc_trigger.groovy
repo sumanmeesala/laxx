@@ -11,7 +11,7 @@ def viewName = 'Athna'
 def existingView = Jenkins.instance.getView(viewName)
 if (existingView == null) {
     // View doesn't exist, create it
-    def newView = new hudson.model.ListView(viewName)
+    def newView = 'Athna'
     newView.save()
 } else {
     // View already exists
